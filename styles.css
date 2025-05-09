@@ -275,3 +275,47 @@ span {
   font-size: 1.6rem;
   margin: 1rem 0 3rem;
 }
+/* Skills Section */
+.skills {
+  background: var(--snd-bg-color);
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skills-container .skill-box {
+  flex: 1 1 20rem;
+  background: var(--bg-color);
+  padding: 4rem 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.3rem solid var(--snd-bg-color);
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.skills-container .skill-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
+.skill-box i {
+  font-size: 5rem;
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.skill-box h3 {
+  font-size: 2rem;
+  color: var(--text-color);
+}
