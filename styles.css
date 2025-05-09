@@ -15,6 +15,76 @@
   --text-color: #000;
   --main-color: #007f73;
 }
+/* Dark/Light Theme Toggle */
+.dark-theme {
+  --bg-color: #121212;
+  --snd-bg-color: #1e1e1e;
+  --text-color: #ffffff;
+  --main-color: #00c896;
+}
+.dark-theme .navbar a:hover {
+  color: #00c896;
+}
+.theme-switch-wrapper {
+  margin-left: 1rem;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+.theme-switch:hover .slider {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  background-color: var(--snd-bg-color);
+  border: 2px solid var(--main-color);
+  border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.icon {
+  font-size: 16px;
+  z-index: 1;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--main-color);
+  transition: transform 0.4s;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.theme-switch input:checked + .slider::before {
+  transform: translate(30px, -50%);
+}
 html {
   font-size: 62.5%;
   overflow-x: hidden;
