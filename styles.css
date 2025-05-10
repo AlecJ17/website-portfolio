@@ -99,7 +99,7 @@ section {
 }
 /* Header Section Code */
 .header {
-  position: relative;
+  position: fixed;
   width: 100%;
   top: 0;
   right: 0;
@@ -558,14 +558,14 @@ span {
     cursor: pointer;
     margin: 0;
     position: absolute;
-    top: 2rem;
+    top: 1.8rem;
     right: 2rem;
   }
   .theme-switch-wrapper {
     margin: 0;
     position: absolute;
     top: 2rem;
-    right: 8rem; /* Adjusted to position left of the menu icon */
+    right: 8rem;
   }
 
   .navbar {
