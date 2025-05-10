@@ -1,3 +1,4 @@
+/* Dark/Light theme code */
 const toggle = document.getElementById("theme-toggle");
 const body = document.body;
 
@@ -12,3 +13,14 @@ toggle.addEventListener("change", () => {
   body.classList.toggle("dark-theme", isDark);
   localStorage.setItem("theme", isDark ? "dark" : "light");
 });
+
+let menu = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
+menu.onclick = () => {
+  menu.classList.toggle("bx-x");
+  navbar.classList.toggle("active");
+};
+window.onscroll = () => {
+  menu.classList.remove("bx-x");
+  navbar.classList.remove("active");
+};
