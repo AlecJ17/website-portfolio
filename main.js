@@ -37,3 +37,13 @@ const typed = new Typed(".multiple-text", {
   backDelay: 1200,
   loop: true,
 });
+
+// Download CV
+const downloadBtn = document.querySelector(".btn");
+downloadBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const link = document.createElement("a");
+  link.href = "cv/Alec-Josef-Serrano-CV.pdf";
+  link.download = "Alec-Josef-Serrano-CV.pdf";
+  link.click();
+});
