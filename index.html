@@ -48,10 +48,9 @@
         <h1>Alec Josef Serrano</h1>
         <h3>And I'm a <span class="multiple-text"></span></h3>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis
-          quisquam voluptate accusantium nisi dolorem necessitatibus,
-          dignissimos consequuntur, facilis laboriosam velit similique illo
-          excepturi fugit fuga ab nulla, obcaecati architecto numquam?
+          I’m a passionate Web Developer and Programmer with a background in
+          Electrical Engineering, blending technical expertise with creative
+          problem-solving to build impactful digital solutions.
         </p>
         <div class="social-media">
           <a
@@ -76,12 +75,34 @@
         <h2 class="heading">About <span>me</span></h2>
         <h3>I'm a <span>Frontend Developer</span></h3>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum alias
-          totam, possimus facilis fuga quod inventore iure ipsam nesciunt
-          architecto tenetur quasi, hic qui similique fugit ut obcaecati quae
-          repudiandae?
+          Hi, I’m Alec Josef Serrano, a passionate and driven Frontend
+          Developer. I hold a Computer Programming diploma from Seneca College,
+          where I gained strong foundations in Object-Oriented Programming
+          (OOP), database design, and agile project management using tools like
+          Jira. My academic journey involved not only individual assignments but
+          also collaborative projects, allowing me to develop full-stack
+          applications while refining my skills in project management and
+          teamwork. My experience in OOP has equipped me with a deep
+          understanding of how to build scalable, maintainable, and efficient
+          software. Through my work with databases, I’ve honed my ability to
+          design and query data structures, ensuring that my applications can
+          handle large datasets seamlessly. I am always looking to improve my
+          technical skills and stay updated with industry trends. My goal is to
+          continue creating innovative, user-friendly applications and grow as a
+          developer. Feel free to explore my work, and don’t hesitate to reach
+          out if you have any questions!
         </p>
-        <a href="#" class="btn">Read More</a>
+        <p id="more-text" style="display: none">
+          Here is more detailed information about me: I specialize in frontend
+          development using HTML, CSS, JavaScript, React, and more. I have
+          experience in building responsive and interactive websites. During my
+          studies at Seneca College, I worked on various projects, applying
+          Object-Oriented Programming (OOP), database design, and Jira for
+          project management. My skills in project management helped me
+          collaborate effectively in team environments, delivering successful
+          projects on time.
+        </p>
+        <a href="javascript:void(0);" id="read-more" class="btn">Read More</a>
       </div>
       <div class="about-img">
         <img src="pictures/about.JPG" alt="About Image" />
@@ -128,7 +149,6 @@
             I create responsive, interactive websites using HTML, CSS,
             JavaScript, and React.
           </p>
-          <a href="#" class="btn">Read More</a>
         </div>
         <div class="services-box">
           <i class="bx bx-palette"></i>
@@ -137,7 +157,6 @@
             I translate modern designs into clean, functional interfaces with
             attention to detail and usability.
           </p>
-          <a href="#" class="btn">Read More</a>
         </div>
         <div class="services-box">
           <i class="bx bx-mobile-alt"></i>
@@ -147,7 +166,6 @@
             desktop to mobile — using mobile-first design principles and modern
             CSS techniques.
           </p>
-          <a href="#" class="btn">Read More</a>
         </div>
       </div>
     </section>
@@ -282,21 +300,38 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me</span></h2>
-      <form action="#">
+      <form id="contact-form">
         <div class="input-box">
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Email Address" />
+          <input
+            type="text"
+            name="full_name"
+            placeholder="Full Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          />
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Phone Number" />
-          <input type="text" placeholder="Subject" />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            required
+            pattern="^[0-9]{10,15}$"
+            title="Please enter a valid phone number (10 to 15 digits)"
+          />
+          <input type="text" name="subject" placeholder="Subject" required />
         </div>
         <textarea
           name="message"
-          id=""
           cols="30"
           rows="10"
           placeholder="Your Message"
+          required
         ></textarea>
         <input type="submit" value="Send Message" class="btn" />
       </form>
@@ -320,5 +355,16 @@
     </footer>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "uP-QmJWZ8xG6wmiiA",
+        });
+      })();
+    </script>
   </body>
 </html>

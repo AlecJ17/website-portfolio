@@ -47,3 +47,34 @@ downloadBtn.addEventListener("click", (e) => {
   link.download = "Alec-Josef-Serrano-CV.pdf";
   link.click();
 });
+
+// Add event listener to the "Read More" button
+document.getElementById("read-more").addEventListener("click", function () {
+  const moreText = document.getElementById("more-text");
+  if (moreText.style.display === "none") {
+    moreText.style.display = "block";
+    this.innerText = "Read Less"; // Change button text to "Read Less"
+  } else {
+    moreText.style.display = "none";
+    this.innerText = "Read More"; // Change button text back to "Read More"
+  }
+});
+// Handle form submission
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_7rui99m", "template_2k9dvpq", this).then(
+      () => {
+        alert("Message sent successfully!");
+        form.reset(); // Reset the form after successful submission
+      },
+      (error) => {
+        alert("Failed to send message. Please try again later.");
+        console.error("EmailJS Error:", error);
+      }
+    );
+  });
+});
