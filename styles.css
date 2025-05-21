@@ -23,7 +23,7 @@
   --main-color: #00c896;
 }
 .dark-theme .navbar a:hover {
-  color: #00c896;
+  color: var(--main-color);
 }
 .theme-switch-wrapper {
   margin-left: 1rem;
@@ -83,7 +83,7 @@
 }
 
 .theme-switch input:checked + .slider::before {
-  transform: translate(30px, -50%);
+  transform: translate(26px, -49%);
 }
 html {
   font-size: 62.5%;
@@ -413,7 +413,21 @@ span {
   flex-wrap: wrap;
   gap: 2rem;
 }
+.project-box {
+  flex: 1 1 20rem;
+  background: var(--bg-color);
+  padding: 4rem 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.3rem solid var(--snd-bg-color);
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .projects-container .project-box {
   flex: 1 1 20rem;
   background: var(--bg-color);
@@ -445,6 +459,67 @@ span {
   border-radius: 2rem;
   margin-bottom: 1rem;
 }
+.projects-intro {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 0 auto 4rem;
+  max-width: 800px;
+  color: var(--text-color);
+}
+.tag {
+  display: inline-block;
+  background-color: #e5f4f3;
+  color: #0a9396;
+  padding: 3px 8px;
+  margin: 4px 4px 0 0;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.project-box:hover img {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+.project-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 6px;
+  font-size: 1.4rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-icon:hover {
+  background-color: #005f55;
+  transform: scale(1.05);
+}
+
+.btn-icon i {
+  font-size: 1.6rem;
+}
+
 /* Contact Section */
 .contact {
   background: var(--bg-color);
